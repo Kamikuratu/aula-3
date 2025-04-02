@@ -59,25 +59,97 @@
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
 
-transacao = {'valor': 12000, 'hora': 20}
+#transacao = {'valor': 12000, 'hora': 20}
 
-if transacao['valor'] > 10000 and (9 < transacao['hora'] or transacao['hora'] > 18):
-    print("Transação suspeita")
+#if transacao['valor'] > 10000 or 9 < transacao['hora'] or transacao['hora'] > 18:
+#    print("Transação suspeita")
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
+#texto = "eu sou uma pessoa muito especial muito especial"
+#palavras = texto.split(" ")
+#contagem_palavras = {}
+
+#for palavra in palavras:
+#    if palavra in contagem_palavras:
+#        contagem_palavras[palavra] += 1
+#    else:
+#        contagem_palavras[palavra] = 1
+
+#print(contagem_palavras)
+
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+
+#lista = [2, 8, 9, 10, 27, 29, 19, 40, 42]
+#lista_normalizada1 = []
+#max_lista = int(max(lista))
+#min_lista = int(min(lista))
+#range = max_lista - min_lista
+
+#for n in lista:
+#    if n == min_lista:
+#        lista_normalizada1.append(0)
+#    elif n == max_lista:
+#        lista_normalizada1.append(1)
+#    else:
+#        lista_normalizada1.append(n / range)
+
+#print(lista_normalizada1)
+
+#lista_normalizada2 = [(x - min_lista) / (max_lista - min_lista) for x in lista]
+#print(lista_normalizada2)
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
+#lista = [{'nome': 'Raphael', 'ID': 123},
+#         {'nome': 'Amanda', 'ID': ''},
+#         {'nome': 'Marcelo', 'ID': 125}]
+
+#usuarios_validos = [usuario for usuario in lista if usuario['ID']]
+
+#print(usuarios_validos)
+
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
+#lista = [2, 3, 12, 4553, 756, 8521, 9327, 9823, 324, 245, 2421]
+#pares = []
+#for n in lista:
+#    if n % 2 == 0:
+#        pares.append(n)
+#    else:
+#        pass
+
+#print(pares)
+
+#lista2 = [2, 3, 12, 4553, 756, 8521, 9327, 9823, 324, 245, 2421]
+#pares2 = [n for n in lista2 if n%2 == 0]
+
+#print(pares2)
+
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800}
+]
+
+total_categoria = {}
+
+for venda in vendas:
+    categoria = venda["categoria"]
+    valor = venda['valor']
+    if categoria in total_categoria:
+        total_categoria[categoria] += valor
+    else:
+        total_categoria[categoria] = valor
+
+print(total_categoria)
 
 ### Exercícios com WHILE
 
