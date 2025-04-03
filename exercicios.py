@@ -212,14 +212,14 @@
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
 
-lista = [2, 4, 6, 8, 10, 12, 14]
-valor_parada = int(input("Insira aonde deseja parar a lista (número de 2 a 14): "))
-i = 2
+#lista = [2, 4, 6, 8, 10, 12, 14]
+#valor_parada = int(input("Insira aonde deseja parar a lista (número de 2 a 14): "))
+#i = 2
 
-while i < max(lista):
-    if i == valor_parada:
-        print("Valor de parada aitngido!")
-        break
-    else:
-        print(i)
-        i = i + 2
+#while i < max(lista):
+#    if i == valor_parada:
+#        print("Valor de parada aitngido!")
+#        break
+#    else:
+#        print(i)
+#        i = i + 2
